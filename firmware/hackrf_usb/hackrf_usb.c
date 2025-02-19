@@ -295,7 +295,7 @@ int main(void)
 		clkin_detect_init();
 	}
 
-	/*while (true) {
+	while (true) {
 		transceiver_request_t request;
 
 		// Briefly disable USB interrupt so that we can
@@ -327,18 +327,6 @@ int main(void)
 		default:
 			break;
 		}
-	}*/
-	while (true) {
-		// Blink LED1 every second
-		led_on(LED1);
-		delay(4000000);  // 1-second delay (adjust as needed)
-		led_off(LED1);
-		delay(4000000);
-
-		// Continue handling USB requests
-		usb_run(&usb_device);
 	}
-
-
 	return 0;
 }
